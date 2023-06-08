@@ -1,18 +1,17 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'user',
+  selector: 'comment',
   template: `<fieldset>
-  <legend>{{user.name}}</legend>
+  <legend>{{comment.id}} user's email:
+   {{comment.email}}</legend>
   <ul>
-    <li>{{user.email}}</li>
-    <li>{{user.phone}}</li>
-    <li>{{user.website}}</li>
-  </ul>
+      <li>{{comment.name}}</li>
+      <li>{{comment.body}}</li>
+    </ul>
   </fieldset>
   `,
 })
-export class UserComponent  {
-  @Input() user;
-
+export class UserComponent {
+  @Input() comment;
 }
